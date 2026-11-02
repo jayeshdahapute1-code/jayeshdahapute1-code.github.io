@@ -1125,5 +1125,30 @@ document.addEventListener('DOMContentLoaded',()=>{
 function openInfo(type){const m=document.getElementById('infoModal');const t=document.getElementById('infoTitle');const x=document.getElementById('infoText');if(!m)return;if(type==='privacy'){t.textContent='Privacy';x.textContent='Your resume information is stored locally in your browser when you use Save Resume. ResumePro does not need an account to create or edit documents in this offline version.';}else{t.textContent='Terms';x.textContent='ResumePro provides document-building tools and templates for creating resumes, CVs and application letters. Review your document before sending or submitting it.';}m.classList.add('open');m.setAttribute('aria-hidden','false');}
 function closeInfo(){const m=document.getElementById('infoModal');if(m){m.classList.remove('open');m.setAttribute('aria-hidden','true')}}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeInfo()});document.addEventListener('click',e=>{const m=document.getElementById('infoModal');if(e.target===m)closeInfo()});</script>
+
+<style id="resumepro-screenshot-visibility-fix">
+/* ResumePro screenshot fixes: visible action labels, readable fields and sidebar text. */
+#ai .ai-actions{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;align-items:stretch!important}
+#ai .ai-actions>button{display:flex!important;align-items:center!important;justify-content:center!important;gap:8px!important;min-height:50px!important;width:100%!important;padding:12px 14px!important;border:1px solid #d6e1f0!important;border-radius:12px!important;background:#fff!important;color:#26334a!important;font-size:14px!important;font-weight:800!important;line-height:1.35!important;white-space:normal!important;visibility:visible!important;opacity:1!important;text-indent:0!important;-webkit-text-fill-color:currentColor!important}
+#ai .ai-actions>button.cta{background:#2878f8!important;color:#fff!important;border-color:#2878f8!important;-webkit-text-fill-color:#fff!important}
+#ai .ai-actions>button:hover{border-color:#2878f8!important;color:#246fe4!important;background:#f4f8ff!important}
+#ai .ai-actions>button.cta:hover{background:#1768e8!important;color:#fff!important;-webkit-text-fill-color:#fff!important}
+#ai .ai-actions>button:focus-visible{outline:3px solid #a9c9ff!important;outline-offset:2px!important}
+#builder .form label{display:block!important;color:#43516a!important;font-size:13px!important;font-weight:800!important;line-height:1.5!important;visibility:visible!important;opacity:1!important}
+#builder .form label input,#builder .form label textarea,#builder .form label select{display:block!important;width:100%!important;min-height:46px!important;margin-top:7px!important;padding:12px 13px!important;background:#fff!important;color:#26344b!important;-webkit-text-fill-color:#26344b!important;border:1px solid #ccd8e8!important;border-radius:12px!important;font:500 15px/1.45 Inter,Arial,sans-serif!important;opacity:1!important;visibility:visible!important}
+#builder .form label input::placeholder,#builder .form label textarea::placeholder{color:#8a97aa!important;-webkit-text-fill-color:#8a97aa!important;opacity:1!important}
+#builder .form label input:focus,#builder .form label textarea:focus,#builder .form label select:focus{outline:none!important;border-color:#2878f8!important;box-shadow:0 0 0 3px rgba(40,120,248,.12)!important}
+#builder .side button{color:#e7effb!important;-webkit-text-fill-color:#e7effb!important;font-size:13px!important;font-weight:750!important;line-height:1.4!important;visibility:visible!important;opacity:1!important}
+#builder .side button.side-active{color:#fff!important;-webkit-text-fill-color:#fff!important}
+#resumePreview .resume-left,#resumePreview .resume-left h5,#resumePreview .resume-left p,#resumePreview .resume-left .resume-chips span,#resumePreview .resume-left .resume-skill-list li,#resumePreview .resume-left .resume-language-list{color:#29415f!important;-webkit-text-fill-color:#29415f!important}
+#resumePreview .resume-left{background:#edf4fc!important}
+#resumePreview .resume-right,#resumePreview .resume-right h1,#resumePreview .resume-right h4,#resumePreview .resume-right p,#resumePreview .resume-right .resume-entry-title,#resumePreview .resume-right .resume-entry-meta,#resumePreview .resume-right .resume-entry-details{color:#26344b!important;-webkit-text-fill-color:#26344b!important}
+#resumePreview .resume-right{background:#fff!important}
+#resumePreview .resume-right header{background:#f2f6fc!important}
+#builder .preview-top{color:#26344b!important}
+#builder .preview-top b{color:#26344b!important}
+@media(max-width:560px){#ai .ai-actions{grid-template-columns:1fr!important}#ai .ai-actions>button{min-height:46px!important;font-size:14px!important}}
+</style>
+
 </body>
 </html>
